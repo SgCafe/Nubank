@@ -27,6 +27,10 @@ body {
   position: relative;
   scroll-behavior: smooth;
   background-color: #1a1a1a;
+
+  @include responsive(l) {
+    background-color: green;
+  }
 }
 
 //deixar elementos de imagem fluidos
