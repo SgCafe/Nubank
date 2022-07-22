@@ -4,6 +4,7 @@ header {
   background-color: transparent;
   box-shadow: none;
 
+  transition: 0.5s ease;
   position: fixed;
   z-index: 999;
 }
@@ -16,4 +17,69 @@ header {
     0px 5.75991px 10.0172px rgba(169, 80, 196, 0.035),
     0px 3.05905px 5.32008px rgba(169, 80, 196, 0.0282725),
     0px 1.27294px 2.21381px rgba(169, 80, 196, 0.0196802);
+}
+
+.navbar-desktop {
+  max-width: $container-xl;
+  margin: 0 auto;
+  padding: 10px 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include responsive(s) {
+    display: none;
+  }
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  background-color: red;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-desktop-item-1 {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbar-desktop-item-2 {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu-desktop {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .menu-item {
+    margin-left: 24px;
+  }
+}
+
+.navbar-mobile {
+  display: none;
+
+  @include responsive(s) {
+    display: block;
+  }
+}
+
+.menu-mobile {
+  display: none;
+
+  @include responsive(s) {
+    display: block;
+  }
 }
