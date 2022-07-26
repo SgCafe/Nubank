@@ -65,6 +65,7 @@ header {
   align-items: center;
 
   .menu-item {
+    position: relative;
     margin-left: 16px;
   }
 }
@@ -95,6 +96,53 @@ header {
   &:hover {
     &::after {
       top: 46%;
+    }
+  }
+}
+
+.dropdown-menu {
+  background-color: $white-light;
+  border-radius: 16px;
+  padding: 16px 24px;
+  list-style: none;
+  position: absolute;
+  top: 48px;
+  left: 24px;
+
+  box-shadow: 0px 51px 80px rgba(169, 80, 196, 0.08),
+    0px 15.375px 24.1177px rgba(169, 80, 196, 0.0521271),
+    0px 6.38599px 10.0172px rgba(169, 80, 196, 0.04),
+    0px 2.30969px 3.62304px rgba(169, 80, 196, 0.0278729);
+
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-link-dropdown {
+  display: inline-block;
+  width: 100%;
+  padding: 8px 16px;
+  position: relative;
+
+  //sempre que for criar um pseudoelement coloca o pai como relative e o filho como absolute
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 90%;
+    left: 0;
+    transition: 0.5s ease;
+    width: 0%;
+    height: 2px;
+    background-color: $secondary-normal;
+  }
+
+  //cria um elemento hover, para quando passar o mouse em cima, modificar o elemento after
+  &:hover {
+    &::after {
+      width: 100%;
     }
   }
 }

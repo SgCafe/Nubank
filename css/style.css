@@ -104,6 +104,7 @@ header {
 }
 
 .menu-desktop .menu-item {
+  position: relative;
   margin-left: 16px;
 }
 
@@ -131,6 +132,54 @@ header {
 
 .nav-link-desktop:hover::after {
   top: 46%;
+}
+
+.dropdown-menu {
+  background-color: #fbf5fc;
+  border-radius: 16px;
+  padding: 16px 24px;
+  list-style: none;
+  position: absolute;
+  top: 48px;
+  left: 24px;
+  -webkit-box-shadow: 0px 51px 80px rgba(169, 80, 196, 0.08), 0px 15.375px 24.1177px rgba(169, 80, 196, 0.0521271), 0px 6.38599px 10.0172px rgba(169, 80, 196, 0.04), 0px 2.30969px 3.62304px rgba(169, 80, 196, 0.0278729);
+          box-shadow: 0px 51px 80px rgba(169, 80, 196, 0.08), 0px 15.375px 24.1177px rgba(169, 80, 196, 0.0521271), 0px 6.38599px 10.0172px rgba(169, 80, 196, 0.04), 0px 2.30969px 3.62304px rgba(169, 80, 196, 0.0278729);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-link-dropdown {
+  display: inline-block;
+  width: 100%;
+  padding: 8px 16px;
+  position: relative;
+}
+
+.nav-link-dropdown::after {
+  content: "";
+  position: absolute;
+  top: 90%;
+  left: 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  width: 0%;
+  height: 2px;
+  background-color: #a950c4;
+}
+
+.nav-link-dropdown:hover::after {
+  width: 100%;
 }
 
 .navbar-mobile {
