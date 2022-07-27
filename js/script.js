@@ -57,3 +57,6 @@ menuItem3.addEventListener("click", ShowDropdown3);
 dropdownMenu1.addEventListener("mouseleave", RemoveDropdown);
 dropdownMenu2.addEventListener("mouseleave", RemoveDropdown);
 dropdownMenu3.addEventListener("mouseleave", RemoveDropdown);
+
+
+// =====Função para ativar o menu mobile quando chegar no tamanho de tela e dar vida ao botão hamburguer
