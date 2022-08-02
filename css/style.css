@@ -176,6 +176,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 800;
 }
 
 .navbar-desktop-item-1 {
@@ -340,9 +341,6 @@ header {
   position: relative;
   cursor: pointer;
   z-index: 800;
-  -webkit-transition: 0.7s ease;
-  transition: 0.7s ease;
-  background-color: #fff;
 }
 
 .bx::after {
@@ -353,6 +351,8 @@ header {
   top: 40%;
   left: 17%;
   background-color: #82269e;
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
 }
 
 .bx::before {
@@ -363,6 +363,8 @@ header {
   top: 64%;
   left: 17%;
   background-color: #82269e;
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
 }
 
 .active-bx {
@@ -373,7 +375,6 @@ header {
   z-index: 800;
   -webkit-transition: 0.7s ease;
   transition: 0.7s ease;
-  background-color: #fff;
 }
 
 .active-bx::after {
@@ -395,8 +396,8 @@ header {
   height: 2px;
   top: 50%;
   left: 17%;
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
+  -webkit-transform: rotate(315deg);
+          transform: rotate(315deg);
   background-color: #82269e;
 }
 
@@ -413,14 +414,12 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  opacity: 1;
-  pointer-events: all;
+  opacity: 0;
+  pointer-events: none;
   -webkit-transform: translate3d(0, -100px, 0);
           transform: translate3d(0, -100px, 0);
-}
-
-.menu-mobile .nav-link-mobile {
-  width: 100%;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }
 
 .active-menu-mobile {
@@ -446,7 +445,6 @@ header {
   font-size: 36px;
   line-height: 120%;
   color: #595959;
-  border: 1px solid red;
   padding: 16px 24px;
   position: relative;
 }

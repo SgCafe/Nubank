@@ -42,6 +42,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 800;
 }
 
 .navbar-desktop-item-1 {
@@ -184,9 +185,6 @@ header {
   position: relative;
   cursor: pointer;
   z-index: 800;
-  transition: 0.7s ease;
-
-  background-color: #fff;
 
   &::after {
     content: "";
@@ -196,6 +194,7 @@ header {
     top: 40%;
     left: 17%;
     background-color: $primary-normal;
+    transition: 0.7s ease;
   }
 
   &::before {
@@ -206,6 +205,7 @@ header {
     top: 64%;
     left: 17%;
     background-color: $primary-normal;
+    transition: 0.7s ease;
   }
 }
 
@@ -217,8 +217,6 @@ header {
   cursor: pointer;
   z-index: 800;
   transition: 0.7s ease;
-
-  background-color: #fff;
 
   &::after {
     content: "";
@@ -241,7 +239,7 @@ header {
     top: 50%;
     left: 17%;
 
-    transform: rotate(135deg); //certo é -45deg
+    transform: rotate(315deg); //certo é -45deg
 
     background-color: $primary-normal;
   }
@@ -260,15 +258,11 @@ header {
   justify-content: center;
   align-items: center;
 
-  opacity: 1;
-  pointer-events: all;
+  opacity: 0;
+  pointer-events: none;
 
-  //subir mais um pouco o menu
   transform: translate3d(0, -100px, 0);
-
-  .nav-link-mobile {
-    width: 100%;
-  }
+  transition: 1s ease;
 }
 
 .active-menu-mobile {
@@ -287,7 +281,6 @@ header {
   display: inline-block;
   @include typeface-1(h3, desktop);
   color: $gray-2;
-  border: 1px solid red;
 
   padding: 16px 24px;
 
